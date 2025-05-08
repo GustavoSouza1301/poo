@@ -1,9 +1,6 @@
 from biblioteca import Pessoa
 
-aluno01 = Pessoa("Guilherme", 21, 82)
+bixinho01 = Pessoa("Victor", 20,76)
 
-
-print(f"{aluno01.nome} tem {aluno01.idade} anos e pesa {aluno01.peso} quilos.")
-
-if aluno01.falar == aluno01.comer:
-    print("Você não pode falar comendo")
+bixinho01.dormindo()
+bixinho01.dormindo()
