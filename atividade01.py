@@ -1,6 +1,13 @@
-from biblioteca import Pessoa
+from biblioteca import *
 
-bixinho01 = Pessoa("Victor", 20,76)
+aluno01 = Pessoa("Gustavo",13,85)
 
-bixinho01.dormindo()
-bixinho01.dormindo()
+aluno01.comer()
+aluno01.dormir()
+aluno01.acordar()
+aluno01.falar()
+aluno01.pararComer()
+aluno01.dormir()
+aluno01.falar()
+aluno01.acordar()
+aluno01.falar()
