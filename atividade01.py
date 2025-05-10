@@ -1,4 +1,4 @@
-from biblioteca import *
+from biblioteca import Pessoa
 
 aluno01 = Pessoa("Gustavo",13,85)
 

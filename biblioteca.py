@@ -80,44 +80,56 @@ class Pessoa():
             print("-" * 60)
 
 class ContaBancaria:
-    def __init__(self, numero, nome, tipoConta):
-        self.nome = nome
-        self.numero = numero
+    def __init__(self, numeroConta, nomeConta, tipoConta):
+        self.nome = nomeConta
+        self.numero = numeroConta
         self.tipoConta = tipoConta
         self.saldo = 0
-        self.status = False
         self.limite = 0
+        self.status = False
 
-    def ativaConta(self):
-        if self.status:
-            print("Conta já está ativada")
+    def ativarConta(self):
+        if self.status == True:
+            print("Conta já está ativa")
+            print("-"*50)
         else:
             self.status = True
-            print("Conta  ativa")
+            print("Conta ativada")
+            print("-"*50)
 
     def depositar(self,valor):
         if self.status == True:
             self.saldo += valor
+            print("Deposito efetuado com sucesso.")
+            print("-"*50)
         else:
             print("Conta não ativada")
+            print("-"*50)
 
     def verificarSaldo(self):
         if self.status == True:
-            print(self.saldo)
+            print(f"Saldo: {self.saldo}")
+            print("-"*50)
         else:
             print("Conta não ativada")
+            print("-"*50)
 
     def sacar(self,valorSaque):
-        if self.status:
+        if self.status == True:
             self.saldo -= valorSaque
             print(f"Saque efetuado com sucesso")
+            print("-"*50)
         else:
             print("Conta não ativada")
+            print("-"*50)
 
     def desativarConta(self):
-        if self.saldo == 0:
+        if self.saldo == 0 and self.status == True:
             self.status = False
             print("Conta desativada")
+            print("-"*50)
         else:
             print("Conta não pode ser desativada")
+            print("-"*50)
+
 
