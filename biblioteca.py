@@ -1,3 +1,6 @@
+from binascii import a2b_qp
+
+
 class Pessoa():
     def __init__(self, nome, idade, peso): # __init__ metodo construtor ou especial
         self.nome = nome
@@ -167,3 +170,95 @@ class Coelho(Animal):
 
     def grunir(self):
         print(f"O {self.nome} está iiii iiii iiii...")
+
+class Ingresso():
+    def __init__(self,valor):
+        self.valor = valor
+
+    def imprimirValor(self):
+        print(f"O valor do ingresso é {self.valor}")
+
+class IngressoVip(Ingresso):
+    def __init__(self, valor):
+        super().__init__(valor)
+        self.valor *= 1.5
+
+    def imprimirValor(self):
+        print(f"O valor do ingresso VIP é {self.valor}")
+
+class Forma:
+    def __init__(self):
+        self.area = 0
+        self.perimetro = 0
+
+class Retangulo(Forma):
+    def __init__(self):
+        super().__init__()
+
+    def calArea(self,base, altura):
+        self.area = base * altura
+        print(self.area)
+
+    def calPerimetro(self, base , altura):
+        self.perimetro = (base + altura) * 2
+        print(self.perimetro)
+
+class Triangulo(Forma):
+    def __init__(self):
+        super().__init__()
+
+    def calArea(self, base, altura,):
+        self.area = (base * altura) / 2
+        print(self.area)
+
+    def calPerimetro(self, base, altura):
+        self.perimetro = (base + altura)
+        print(self.perimetro)
+
+class Atleta:
+    def __init__(self):
+        self.aposentado = False
+        self.peso = 0
+        self.aquecer = False
+
+    def aposentar(self):
+        self.aposentado = True
+
+    def aquecido(self):
+        self.aquecer = True
+        print("Acabou de aquecer")
+
+class Corredor(Atleta):
+    def __init__(self):
+        super().__init__()
+
+    def correr(self):
+        if self.aquecer == True:
+            print("Começou a correr")
+        else:
+            print("Precisa aquecer antes de correr")
+
+class Nadador(Atleta):
+    def __init__(self):
+        super().__init__()
+
+    def nadar(self):
+        if self.aquecer == True:
+            print("Começou a nadar")
+        else:
+            print("Precisa aquecer antes de nadar")
+
+class Ciclita(Atleta):
+    def __init__(self):
+        super().__init__()
+    def pedalar(self):
+        if self.aquecer == True:
+            print("Começou a pedalar")
+        else:
+            print("Precisa aquecer antes de pedalar")
+
+
+
+
+
+
