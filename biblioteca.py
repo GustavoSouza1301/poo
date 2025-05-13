@@ -132,4 +132,38 @@ class ContaBancaria:
             print("Conta não pode ser desativada")
             print("-"*50)
 
+class Animal():
+    def __init__(self,nome , cor):
+        self.nome = nome
+        self.cor = cor
 
+    def comer(self):
+        print(f"O {self.nome} foi comer ...")
+
+class Gato(Animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome, cor)
+
+    def miar(self):
+        print(f"O {self.nome} foi miando... miauhh")
+
+class Cachorro(Animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome,cor)
+
+    def latir(self):
+        print(f"O {self.nome} tá latindo...")
+
+class Vaca(Animal):
+    def __init__(self, nome ,cor):
+        super().__init__(nome,cor)
+
+    def mugir(self):
+        print(f"O {self.nome} está mugindo...")
+
+class Coelho(Animal):
+    def __init__(self, nome, cor):
+        super().__init__(nome, cor)
+
+    def grunir(self):
+        print(f"O {self.nome} está iiii iiii iiii...")
